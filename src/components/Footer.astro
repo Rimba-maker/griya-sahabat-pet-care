@@ -1,0 +1,56 @@
+---
+import { PawPrintIcon } from "@phosphor-icons/react/dist/ssr/PawPrint";
+import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr/WhatsappLogo";
+import { EnvelopeSimpleIcon } from "@phosphor-icons/react/dist/ssr/EnvelopeSimple";
+import { MapPinIcon } from "@phosphor-icons/react/dist/ssr/MapPin";
+import { ClockIcon } from "@phosphor-icons/react/dist/ssr/Clock";
+import { InstagramLogoIcon } from "@phosphor-icons/react/dist/ssr/InstagramLogo";
+import { FacebookLogoIcon } from "@phosphor-icons/react/dist/ssr/FacebookLogo";
+import { TiktokLogoIcon } from "@phosphor-icons/react/dist/ssr/TiktokLogo";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border/70 bg-cream-alt">
+  <div class="mx-auto max-w-6xl px-6 pb-24 pt-14 md:py-14">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <div class="mb-3 flex items-center gap-2.5 text-[17px] font-extrabold text-ink">
+          <span class="grid h-8 w-8 place-items-center rounded-[9px] bg-gradient-to-br from-teal to-teal-deep text-white">
+            <PawPrintIcon size={17} weight="fill" />
+          </span>
+          Griya Sahabat
+        </div>
+        <p class="max-w-[38ch] text-sm italic text-ink-muted">
+          "Rumah Kedua Untuk Yang Berbulu, Bersayap, dan Bersisik."
+        </p>
+      </div>
+
+      <div>
+        <div class="mb-3 text-xs font-bold uppercase tracking-wider text-ink-muted">Kontak</div>
+        <ul class="space-y-2 text-sm text-ink-muted">
+          <li class="flex items-center gap-2"><WhatsappLogoIcon size={15} /> 0812-3456-7890</li>
+          <li class="flex items-center gap-2"><EnvelopeSimpleIcon size={15} /> griyasahabat@petcare.id</li>
+          <li class="flex items-center gap-2"><MapPinIcon size={15} /> Jl. Sahabat Bulu No. 12</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="mb-3 text-xs font-bold uppercase tracking-wider text-ink-muted">Jam Buka</div>
+        <ul class="space-y-2 text-sm text-ink-muted">
+          <li class="flex items-center gap-2"><ClockIcon size={15} /> Senin–Minggu: 07.00–20.00</li>
+          <li class="flex items-center gap-2"><ClockIcon size={15} weight="fill" /> Live CCTV: 24 jam</li>
+        </ul>
+        <div class="mt-4 flex gap-3.5 text-ink-muted">
+          <InstagramLogoIcon size={19} />
+          <FacebookLogoIcon size={19} />
+          <TiktokLogoIcon size={19} />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-border/70 pt-6 text-xs text-ink-muted">
+      © {year} Griya Sahabat Pet Care. Semua hak dilindungi.
+    </div>
+  </div>
+</footer>

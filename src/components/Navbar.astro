@@ -1,0 +1,36 @@
+---
+import { PawPrintIcon } from "@phosphor-icons/react/dist/ssr/PawPrint";
+
+const links = [
+  { label: "Layanan", href: "#layanan" },
+  { label: "Grooming", href: "#grooming" },
+  { label: "Pet Hotel", href: "#hotel" },
+  { label: "Daycare", href: "#hotel" },
+  { label: "Toko", href: "#toko" },
+  { label: "Live Cam", href: "#live-cctv" },
+];
+---
+
+<header class="sticky top-0 z-50 hidden border-b border-border/70 bg-cream/90 backdrop-blur md:block">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#" class="flex items-center gap-2.5 text-[17px] font-extrabold tracking-tight text-ink">
+      <span class="grid h-8 w-8 place-items-center rounded-[9px] bg-gradient-to-br from-teal to-teal-deep text-white">
+        <PawPrintIcon size={17} weight="fill" />
+      </span>
+      Griya Sahabat
+    </a>
+
+    <ul class="hidden items-center gap-7 text-sm text-ink-muted md:flex">
+      {links.map((l) => (
+        <li><a href={l.href} class="transition-colors hover:text-teal-deep">{l.label}</a></li>
+      ))}
+    </ul>
+
+    <a
+      href="#booking"
+      class="rounded-lg bg-teal px-[18px] py-2.5 text-[13.5px] font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
+    >
+      Booking Sekarang
+    </a>
+  </nav>
+</header>

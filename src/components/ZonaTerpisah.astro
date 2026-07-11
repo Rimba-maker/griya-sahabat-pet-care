@@ -1,0 +1,35 @@
+---
+import { CatIcon } from "@phosphor-icons/react/dist/ssr/Cat";
+import { DogIcon } from "@phosphor-icons/react/dist/ssr/Dog";
+---
+
+<section class="border-y border-border/70 bg-cream-alt">
+  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-14 md:grid-cols-2 md:items-center md:gap-10 md:py-20">
+    <div>
+      <span class="mb-4 inline-block rounded-full bg-mint-tint px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-teal-deep">
+        Zona Terpisah
+      </span>
+      <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-ink md:text-4xl text-balance">
+        Kucing dan Anjing, Dunia Terpisah.
+      </h2>
+      <p class="max-w-[52ch] text-[16.5px] leading-relaxed text-ink-muted">
+        Area grooming, hotel, dan daycare untuk kucing dan anjing dipisah total — ruangan berbeda,
+        jalur masuk berbeda, bahkan jadwal main di luar juga tidak bersamaan. Ini mengurangi stres
+        yang sering jadi penyebab hewan tidak nafsu makan saat dititipkan.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="rounded-2xl border border-border bg-mint-tint p-6">
+        <div class="mb-3 text-teal-deep"><CatIcon size={32} weight="duotone" /></div>
+        <div class="font-bold text-ink">Zona Kucing</div>
+        <div class="mt-1 text-sm text-ink-muted">Tenang, ruangan tertutup, jauh dari suara anjing</div>
+      </div>
+      <div class="rounded-2xl border border-border bg-coral-tint p-6">
+        <div class="mb-3 text-coral"><DogIcon size={32} weight="duotone" /></div>
+        <div class="font-bold text-ink">Zona Anjing</div>
+        <div class="mt-1 text-sm text-ink-muted">Area bermain luas, jadwal keluar sendiri</div>
+      </div>
+    </div>
+  </div>
+</section>

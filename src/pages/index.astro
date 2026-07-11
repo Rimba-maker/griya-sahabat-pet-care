@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import BottomNav from "../components/BottomNav.tsx";
+import Hero from "../components/Hero.tsx";
+import Layanan from "../components/Layanan.tsx";
+import KenapaBeda from "../components/KenapaBeda.tsx";
+import PasporSahabat from "../components/PasporSahabat.tsx";
+import Grooming from "../components/Grooming.tsx";
+import PetHotelDaycare from "../components/PetHotelDaycare.tsx";
+import LiveCCTV from "../components/LiveCCTV.tsx";
+import Toko from "../components/Toko.tsx";
+import ZonaTerpisah from "../components/ZonaTerpisah.astro";
+import Testimonial from "../components/Testimonial.tsx";
+import FAQ from "../components/FAQ.tsx";
+import CTABooking from "../components/CTABooking.tsx";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Navbar />
+  <BottomNav client:load />
+  <Hero client:load />
+  <Layanan client:visible />
+  <KenapaBeda client:visible />
+  <PasporSahabat client:visible />
+  <Grooming client:visible />
+  <PetHotelDaycare client:visible />
+  <LiveCCTV client:visible />
+  <Toko client:visible />
+  <ZonaTerpisah />
+  <Testimonial client:visible />
+  <FAQ client:visible />
+  <CTABooking client:idle />
+  <Footer />
+</Layout>
