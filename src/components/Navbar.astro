@@ -1,36 +1,44 @@
 ---
 import { PawPrintIcon } from "@phosphor-icons/react/dist/ssr/PawPrint";
-
+import { ListIcon } from "@phosphor-icons/react/dist/ssr/List";
 const links = [
   { label: "Layanan", href: "#layanan" },
   { label: "Grooming", href: "#grooming" },
   { label: "Pet Hotel", href: "#hotel" },
-  { label: "Daycare", href: "#hotel" },
+  { label: "Daycare", href: "#daycare" },
   { label: "Toko", href: "#toko" },
-  { label: "Live Cam", href: "#live-cctv" },
+  { label: "Akses CCTV", href: "#live-cctv" },
 ];
 ---
-
-<header class="sticky top-0 z-50 hidden border-b border-border/70 bg-cream/90 backdrop-blur md:block">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="#" class="flex items-center gap-2.5 text-[17px] font-extrabold tracking-tight text-ink">
-      <span class="grid h-8 w-8 place-items-center rounded-[9px] bg-gradient-to-br from-teal to-teal-deep text-white">
-        <PawPrintIcon size={17} weight="fill" />
-      </span>
-      Griya Sahabat
+<header class="site-header">
+  <nav class="wrap header-row" aria-label="Navigasi utama">
+    <a href="#hero" class="brand" aria-label="Griya Sahabat Pet Care, beranda">
+      <PawPrintIcon size={28} weight="fill" aria-hidden="true" />
+      <span><span class="brand-name">Griya Sahabat</span><small>PET CARE</small></span>
     </a>
-
-    <ul class="hidden items-center gap-7 text-sm text-ink-muted md:flex">
-      {links.map((l) => (
-        <li><a href={l.href} class="transition-colors hover:text-teal-deep">{l.label}</a></li>
-      ))}
+    <ul class="desktop-links">
+      {links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
     </ul>
-
-    <a
-      href="#booking"
-      class="rounded-lg bg-teal px-[18px] py-2.5 text-[13.5px] font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-    >
-      Booking Sekarang
-    </a>
+    <a href="#booking" class="button-secondary header-booking">Yuk, rencanakan kunjungan</a>
+    <details class="mobile-menu" id="menu-nav">
+      <summary aria-label="Menu navigasi"><ListIcon size={25} weight="bold" aria-hidden="true" /></summary>
+      <ul class="mobile-links">
+        {links.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+        <li><a href="#paspor">Paspor Sahabat</a></li>
+        <li><a href="#booking">Rencanakan kunjungan</a></li>
+      </ul>
+    </details>
   </nav>
 </header>
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>("#menu-nav");
+  menu?.addEventListener("click", (event) => {
+    if ((event.target as HTMLElement).closest("a")) menu.open = false;
+  });
+  menu?.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      menu.open = false;
+      menu.querySelector("summary")?.focus();
+    }
+  });
+</script>

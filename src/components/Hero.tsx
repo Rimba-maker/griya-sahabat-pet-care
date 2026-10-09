@@ -1,125 +1,81 @@
-import { motion } from "framer-motion";
-import { staggerParent, griyaFade } from "./Reveal";
+import { useEffect, useState } from "react";
+import { ArrowRightIcon } from "@phosphor-icons/react/dist/csr/ArrowRight";
+import { StorefrontIcon } from "@phosphor-icons/react/dist/csr/Storefront";
+import { ScissorsIcon } from "@phosphor-icons/react/dist/csr/Scissors";
 import { HouseIcon } from "@phosphor-icons/react/dist/csr/House";
-import { PawPrintIcon } from "@phosphor-icons/react/dist/csr/PawPrint";
-import { StethoscopeIcon } from "@phosphor-icons/react/dist/csr/Stethoscope";
-import { IdentificationCardIcon } from "@phosphor-icons/react/dist/csr/IdentificationCard";
-import { CheckIcon } from "@phosphor-icons/react/dist/csr/Check";
+import { SunIcon } from "@phosphor-icons/react/dist/csr/Sun";
+import { careNote, civilDate, localToday, services, type Service } from "../lib/booking";
 
-const badges = [
-  { icon: HouseIcon, label: <><b className="font-extrabold text-teal-deep">500+</b> Sahabat Sudah Menginap</> },
-  { icon: PawPrintIcon, label: "Zona Terpisah Kucing & Anjing" },
-  { icon: StethoscopeIcon, label: "Dokter Hewan On-Call" },
+const paths = [
+  { name: "Pet Shop", href: "#toko", icon: StorefrontIcon },
+  { name: "Grooming", href: "#grooming", icon: ScissorsIcon },
+  { name: "Pet Hotel", href: "#hotel", icon: HouseIcon },
+  { name: "Daycare", href: "#daycare", icon: SunIcon },
 ];
 
 export default function Hero() {
+  const [pet, setPet] = useState("Kucing");
+  const [service, setService] = useState<Service>("Grooming");
+  const [today, setToday] = useState("");
+  const [date, setDate] = useState("");
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const selectedService = params.get("layanan") as Service;
+    const selectedPet = params.get("hewan") ?? "";
+    if (services.includes(selectedService)) setService(selectedService);
+    if (["Kucing", "Anjing", "Hewan lain"].includes(selectedPet)) setPet(selectedPet);
+    const selectedDate = params.get("tanggal") ?? "";
+    if (civilDate(selectedDate)) setDate(selectedDate);
+    setToday(localToday());
+  }, []);
+
   return (
-    <section id="hero" className="mx-auto grid max-w-6xl gap-10 px-6 pb-10 pt-14 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-14 md:pb-16 md:pt-20">
-      <motion.div initial="hidden" animate="visible" variants={staggerParent}>
-        <motion.div
-          variants={griyaFade}
-          className="mb-5 inline-flex items-center gap-2 rounded-full bg-teal-tint px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-teal-deep"
-        >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ring opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ring" />
-          </span>
-          Live CCTV 24 Jam — Selalu Bisa Dilihat
-        </motion.div>
-
-        <motion.h1
-          variants={griyaFade}
-          className="mb-5 text-[2.6rem] font-extrabold leading-[1.08] tracking-tight text-ink text-balance md:text-[3.2rem]"
-        >
-          Saat Kamu Pergi,
-          <br />
-          Sahabatmu Tetap <span className="text-teal-deep">Merasa Di Rumah.</span>
-        </motion.h1>
-
-        <motion.p variants={griyaFade} className="mb-8 max-w-[46ch] text-[17.5px] leading-relaxed text-ink-muted">
-          Pet shop, grooming, hotel, dan daycare dalam satu tempat. Dilengkapi live CCTV supaya kamu
-          bisa lihat anabulmu kapan saja, dan zona terpisah kucing-anjing supaya semua tetap tenang.
-        </motion.p>
-
-        <motion.div variants={griyaFade} className="mb-9 flex flex-wrap gap-3.5">
-          <a
-            href="#booking"
-            className="inline-flex items-center gap-2 rounded-[10px] bg-teal px-6 py-3.5 text-[15px] font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-          >
-            Booking Sekarang →
-          </a>
-          <a
-            href="#live-cctv"
-            className="inline-flex items-center gap-2 rounded-[10px] border border-border px-6 py-3.5 text-[15px] font-bold text-ink transition-colors hover:bg-cream-alt"
-          >
-            <span className="h-2 w-2 rounded-full bg-ring" />
-            Lihat Live Cam
-          </a>
-        </motion.div>
-
-        <motion.div variants={griyaFade} className="flex flex-wrap gap-2.5">
-          {badges.map((b, i) => (
-            <span
-              key={i}
-              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-cream-alt px-3.5 py-2 text-[12.5px] font-semibold text-ink"
-            >
-              <b.icon size={15} weight="bold" className="text-teal-deep" /> {b.label}
-            </span>
-          ))}
-        </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-        className="relative"
-      >
-        <div className="rounded-[20px] border border-border bg-cream-alt p-3.5 shadow-lg">
-          <div className="flex items-center justify-between px-1.5 pb-3">
-            <span className="inline-flex items-center gap-1.5 text-[11.5px] font-extrabold tracking-wide text-ring">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ring opacity-75" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-ring" />
-              </span>
-              LIVE — KAMAR DELUXE 03
-            </span>
-            <span className="rounded-full bg-mint-tint px-2.5 py-1 text-[11px] font-bold text-ink-muted">
-              Zona Anjing
-            </span>
+    <section id="hero" className="welcome">
+      <div className="wrap">
+        <h1>Saat Kamu Pergi,<br />Sahabatmu Tetap Merasa Di Rumah.</h1>
+        <p className="welcome-intro">Pet shop, grooming, hotel, dan daycare dalam satu tempat.<br className="hidden md:block" /> Untuk yang berbulu, bersayap, dan bersisik—dengan perhatian pada kebutuhan masing-masing.</p>
+        <div className="welcome-desk">
+          <figure className="pet-portrait">
+            <img src="/images/pets/happy-dog-640.webp" srcSet="/images/pets/happy-dog-640.webp 640w, /images/pets/happy-dog-1280.webp 1280w" sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anjing kecil tersenyum di antara bunga dan rumput" fetchPriority="high" />
+            <figcaption>Yang ceria, disambut hangat.</figcaption>
+          </figure>
+          <div className="visit-desk">
+            <h2>Mau main, dirawat, atau menginap?</h2>
+            <p>Rencana dulu, konfirmasi bersama tim.</p>
+            <form action="/#booking" method="get">
+              <div className="field">
+                <label htmlFor="quick-service">Layanan yang dibutuhkan</label>
+                <select id="quick-service" name="layanan" value={service} onChange={(event) => setService(event.target.value as Service)}>
+                  <option value="Grooming">Grooming</option><option value="Hotel">Pet Hotel</option><option value="Daycare">Daycare</option>
+                </select>
+              </div>
+              <div className="two-fields">
+                <div className="field">
+                  <label htmlFor="quick-pet">Sahabatmu</label>
+                  <select id="quick-pet" name="hewan" value={pet} onChange={(event) => setPet(event.target.value)}>
+                    <option>Kucing</option><option>Anjing</option><option>Hewan lain</option>
+                  </select>
+                </div>
+                <div className="field">
+                  <label htmlFor="quick-date">{service === "Hotel" ? "Rencana check-in" : "Tanggal rencana"}</label>
+                  <input id="quick-date" name="tanggal" type="date" min={today || undefined} value={date} onChange={(event) => setDate(event.target.value)} aria-describedby="quick-date-help" />
+                </div>
+              </div>
+              <p className="care-note" key={`${pet}-${service}`} aria-live="polite">{careNote(pet)}</p>
+              <button type="submit" className="button">Rencanakan kunjungan <ArrowRightIcon size={17} weight="bold" aria-hidden="true" /></button>
+              <p id="quick-date-help" className="text-center text-[11px] leading-relaxed text-muted">Tanggal boleh dilengkapi nanti. Belum ada booking yang dikirim.</p>
+            </form>
           </div>
-
-          <div
-            className="relative h-[300px] overflow-hidden rounded-[13px] bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(180deg, rgba(22,132,126,0) 55%, rgba(22,132,126,0.35) 100%), url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=800&auto=format&fit=crop')",
-            }}
-          >
-            <div className="absolute bottom-3 left-3.5 text-[13px] font-bold text-white drop-shadow">
-              Milo — Golden Retriever
-              <span className="block text-[11.5px] font-medium opacity-85">Sedang bermain di taman dalam</span>
-            </div>
-          </div>
+          <figure className="pet-portrait">
+            <img src="/images/pets/curious-kitten-640.webp" srcSet="/images/pets/curious-kitten-640.webp 640w, /images/pets/curious-kitten-1280.webp 1280w" sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anak kucing bermata besar di bawah dedaunan hijau" />
+            <figcaption>Yang pemalu, dikenali dulu.</figcaption>
+          </figure>
         </div>
-
-        <div className="absolute -bottom-7 -right-4 w-52 rounded-[14px] border border-border bg-cream-alt p-3.5 shadow-lg">
-          <div className="mb-2.5 flex items-center gap-2.5">
-            <div className="grid h-[34px] w-[34px] place-items-center rounded-[9px] bg-coral-tint text-coral">
-              <IdentificationCardIcon size={18} weight="duotone" />
-            </div>
-            <div>
-              <div className="text-[13.5px] font-extrabold leading-tight text-ink">Paspor Sahabat</div>
-              <div className="text-[11px] text-ink-muted">Milo · Golden Retriever</div>
-            </div>
-          </div>
-          <div className="space-y-1 text-[11.5px] text-ink-muted">
-            <div className="flex items-center gap-1.5"><CheckIcon size={12} weight="bold" className="text-teal-deep shrink-0" /> Vaksin lengkap — Jan 2026</div>
-            <div className="flex items-center gap-1.5"><CheckIcon size={12} weight="bold" className="text-teal-deep shrink-0" /> Tidak ada alergi makanan</div>
-            <div className="flex items-center gap-1.5"><CheckIcon size={12} weight="bold" className="text-teal-deep shrink-0" /> Ramah, sedikit cemas suara keras</div>
-          </div>
-        </div>
-      </motion.div>
+        <p className="stock-note">Foto ilustrasi Pexels, bukan dokumentasi fasilitas atau pelanggan Griya Sahabat.</p>
+        <nav className="service-paths" aria-label="Temukan layanan sahabatmu">
+          {paths.map((path) => <a key={path.name} href={path.href}><path.icon size={20} weight="bold" aria-hidden="true" />{path.name}</a>)}
+        </nav>
+      </div>
     </section>
   );
 }

@@ -1,52 +1,87 @@
-import { motion } from "framer-motion";
-import Reveal, { staggerParent, griyaFade } from "./Reveal";
-import { ForkKnifeIcon } from "@phosphor-icons/react/dist/csr/ForkKnife";
-import { BoneIcon } from "@phosphor-icons/react/dist/csr/Bone";
-import { TagIcon } from "@phosphor-icons/react/dist/csr/Tag";
-import { PuzzlePieceIcon } from "@phosphor-icons/react/dist/csr/PuzzlePiece";
-import { SprayBottleIcon } from "@phosphor-icons/react/dist/csr/SprayBottle";
-import { BedIcon } from "@phosphor-icons/react/dist/csr/Bed";
-
 const categories = [
-  { icon: ForkKnifeIcon, label: "Makanan Premium", tint: "bg-mint-tint", iconColor: "text-teal-deep" },
-  { icon: BoneIcon, label: "Snack & Treats", tint: "bg-coral-tint", iconColor: "text-coral" },
-  { icon: TagIcon, label: "Aksesoris (kalung, harness)", tint: "bg-teal-tint", iconColor: "text-teal-deep" },
-  { icon: PuzzlePieceIcon, label: "Mainan", tint: "bg-mint-tint", iconColor: "text-teal-deep" },
-  { icon: SprayBottleIcon, label: "Perawatan (shampoo, vitamin)", tint: "bg-coral-tint", iconColor: "text-coral" },
-  { icon: BedIcon, label: "Kandang & Tempat Tidur", tint: "bg-teal-tint", iconColor: "text-teal-deep" },
+  { label: "Makanan Premium", description: "Untuk kebutuhan makan sesuai jenis dan usia sahabatmu.", image: "food", alt: "Ilustrasi makanan hewan", className: "md:col-span-6", aspect: "md:aspect-[3/2]" },
+  { label: "Snack & Treats", description: "Camilan untuk selingan dan momen belajar.", image: "treats", alt: "Ilustrasi camilan untuk hewan", className: "md:col-span-3", aspect: "md:aspect-[4/5]" },
+  { label: "Mainan", description: "Teman bermain untuk energi kecil maupun besar.", image: "play-dog", alt: "Ilustrasi anjing dengan mainan berwarna-warni", className: "md:col-span-3", aspect: "md:aspect-[4/5]" },
 ];
+
+function categoryHref(category: string) {
+  const query = new URLSearchParams({ catatan: `Saya ingin menanyakan stok ${category}. Mohon konfirmasi pilihan dan ketersediaannya sebelum saya berkunjung.` });
+  return `/?${query}#booking`;
+}
 
 export default function Toko() {
   return (
-    <section id="toko" className="border-y border-border/70 bg-cream-alt">
-      <div className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-        <Reveal>
-          <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-ink md:mb-12 md:text-4xl text-balance">
-            Kebutuhan Harian Sahabatmu.
-          </h2>
-        </Reveal>
+    <section id="toko" className="section bg-cream text-ink" aria-labelledby="toko-heading">
+      <div className="wrap">
+        <div className="mb-9 grid gap-5 md:grid-cols-2 md:items-end md:gap-12">
+          <h2 id="toko-heading" className="section-heading">Kebutuhan harian sahabatmu.</h2>
+          <p className="intro">Makan, bermain, dirawat, lalu istirahat. Jelajahi kategori kebutuhan dan siapkan pertanyaan stok sebelum berkunjung.</p>
+        </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerParent}
-          className="grid grid-cols-2 gap-3 lg:grid-cols-3"
-        >
-          {categories.map((c) => (
-            <motion.div
-              key={c.label}
-              variants={griyaFade}
-              whileHover={{ y: -4 }}
-              className="flex items-center gap-3 rounded-2xl bg-cream p-3.5 shadow-sm md:gap-4 md:p-5"
-            >
-              <div className={`grid h-9 w-9 shrink-0 place-items-center rounded-xl ${c.tint} ${c.iconColor} md:h-11 md:w-11`}>
-                <c.icon size={19} weight="duotone" />
-              </div>
-              <span className="text-[13.5px] font-semibold text-ink md:text-base">{c.label}</span>
-            </motion.div>
+        <div className="grid items-start gap-x-6 gap-y-8 md:grid-cols-12 lg:gap-x-8">
+          {categories.map((category) => (
+            <article key={category.label} className={`min-w-0 ${category.className}`}>
+              <img
+                src={`/images/pets/${category.image}-640.webp`}
+                srcSet={`/images/pets/${category.image}-640.webp 640w, /images/pets/${category.image}-1280.webp 1280w`}
+                sizes={category.image === "food" ? "(min-width: 768px) 560px, (min-width: 640px) 600px, calc(100vw - 48px)" : "(min-width: 768px) 280px, (min-width: 640px) 600px, calc(100vw - 48px)"}
+                width={1280}
+                height={960}
+                loading="lazy"
+                decoding="async"
+                alt={category.alt}
+                className={`photo aspect-[4/3] ${category.aspect}`}
+              />
+              <h3 className="mt-5 text-xl lg:text-2xl">{category.label}</h3>
+              <p className="mb-3 mt-2 text-sm leading-relaxed text-muted">{category.description}</p>
+              <a href={categoryHref(category.label)} className="text-link text-sm">Tanyakan stok {category.label.toLowerCase()}</a>
+            </article>
           ))}
-        </motion.div>
+        </div>
+
+        <div className="mt-10 grid items-start gap-8 border-t border-border pt-9 md:grid-cols-12 lg:gap-10">
+          <article className="min-w-0 md:col-span-5">
+            <img
+              src="/images/pets/care-supplies-640.webp"
+              srcSet="/images/pets/care-supplies-640.webp 640w, /images/pets/care-supplies-1280.webp 1280w"
+              sizes="(min-width: 768px) 460px, (min-width: 640px) 600px, calc(100vw - 48px)"
+              width={1280}
+              height={960}
+              loading="lazy"
+              decoding="async"
+              alt="Ilustrasi perlengkapan perawatan dengan shampoo, handuk, dan sikat"
+              className="photo aspect-[4/3] md:aspect-[16/9]"
+            />
+            <h3 className="mt-5 text-xl lg:text-2xl">Perawatan</h3>
+            <p className="mb-3 mt-2 text-sm leading-relaxed text-muted">Shampoo dan vitamin sesuai kebutuhan. Ceritakan kondisi serta alergi sahabatmu saat menanyakan pilihan.</p>
+            <a href={categoryHref("Perawatan (shampoo, vitamin)")} className="text-link text-sm">Tanyakan stok perawatan</a>
+          </article>
+
+          <article className="min-w-0 rounded-xl bg-meadow p-6 md:col-span-3">
+            <h3 className="text-xl lg:text-2xl">Aksesoris</h3>
+            <p className="mb-5 mt-3 text-sm leading-relaxed">Kalung dan harness. Sampaikan jenis hewan serta ukuran agar tim bisa membantu menjelaskan pilihan yang sesuai.</p>
+            <a href={categoryHref("Aksesoris (kalung, harness)")} className="text-link text-sm">Tanyakan stok aksesoris</a>
+          </article>
+
+          <article className="min-w-0 md:col-span-4">
+            <img
+              src="/images/pets/dog-bed-640.webp"
+              srcSet="/images/pets/dog-bed-640.webp 640w, /images/pets/dog-bed-1280.webp 1280w"
+              sizes="(min-width: 768px) 370px, (min-width: 640px) 600px, calc(100vw - 48px)"
+              width={1280}
+              height={960}
+              loading="lazy"
+              decoding="async"
+              alt="Ilustrasi tempat istirahat dan perlengkapan hewan"
+              className="photo aspect-[4/3]"
+            />
+            <h3 className="mt-5 text-xl lg:text-2xl">Kandang & Tempat Tidur</h3>
+            <p className="mb-3 mt-2 text-sm leading-relaxed text-muted">Pilih kebutuhan istirahat dengan mempertimbangkan ukuran dan kebiasaan sahabatmu.</p>
+            <a href={categoryHref("Kandang & Tempat Tidur")} className="text-link text-sm">Tanyakan stok tempat istirahat</a>
+          </article>
+        </div>
+
+        <p className="photo-caption mt-8 max-w-[90ch]">Semua foto adalah ilustrasi kategori, bukan katalog barang yang dijual atau bukti stok tersedia. Tautan kategori menyiapkan catatan pertanyaan di form kunjungan; stok, pilihan produk, dan harga perlu dikonfirmasi oleh tim.</p>
       </div>
     </section>
   );

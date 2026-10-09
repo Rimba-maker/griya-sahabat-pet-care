@@ -20,17 +20,19 @@ import Footer from "../components/Footer.astro";
 <Layout>
   <Navbar />
   <BottomNav client:load />
-  <Hero client:load />
-  <Layanan client:visible />
-  <KenapaBeda client:visible />
-  <PasporSahabat client:visible />
-  <Grooming client:visible />
-  <PetHotelDaycare client:visible />
-  <LiveCCTV client:visible />
-  <Toko client:visible />
-  <ZonaTerpisah />
-  <Testimonial client:visible />
-  <FAQ client:visible />
-  <CTABooking client:idle />
+  <main id="main-content">
+    <Hero client:load />
+    <Layanan />
+    <KenapaBeda />
+    <PasporSahabat />
+    <Grooming />
+    <PetHotelDaycare />
+    <LiveCCTV />
+    <Toko />
+    <ZonaTerpisah />
+    <Testimonial />
+    <FAQ />
+    <CTABooking client:load />
+  </main>
   <Footer />
 </Layout>

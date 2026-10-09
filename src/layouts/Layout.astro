@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title = "Griya Sahabat Pet Care — Pet Shop, Grooming, Hotel & Daycare",
-  description = "Pet shop, grooming, hotel, dan daycare dalam satu tempat. Live CCTV 24 jam, zona terpisah kucing-anjing, paspor hewan tersimpan. Titipkan sahabatmu dengan tenang.",
+  description = "Pet shop, grooming, hotel, dan daycare dalam satu tempat. Kenali Paspor Sahabat, zona kucing dan anjing terpisah, serta alur akses CCTV privat. Rencanakan kunjungan sahabatmu.",
 } = Astro.props;
 ---
 
@@ -19,6 +19,8 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/fonts/dynapuff-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -27,7 +29,10 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content="/og-image.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Griya Sahabat Pet Care — rumah kedua untuk sahabatmu" />
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
@@ -43,6 +48,7 @@ const {
     })} />
   </head>
   <body>
+    <a class="skip-link button" href="#main-content">Lewati ke isi utama</a>
     <slot />
   </body>
 </html>

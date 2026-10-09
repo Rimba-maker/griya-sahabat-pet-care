@@ -1,35 +1,50 @@
----
-import { CatIcon } from "@phosphor-icons/react/dist/ssr/Cat";
-import { DogIcon } from "@phosphor-icons/react/dist/ssr/Dog";
----
-
-<section class="border-y border-border/70 bg-cream-alt">
-  <div class="mx-auto grid max-w-6xl gap-8 px-6 py-14 md:grid-cols-2 md:items-center md:gap-10 md:py-20">
-    <div>
-      <span class="mb-4 inline-block rounded-full bg-mint-tint px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-teal-deep">
-        Zona Terpisah
-      </span>
-      <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-ink md:text-4xl text-balance">
-        Kucing dan Anjing, Dunia Terpisah.
-      </h2>
-      <p class="max-w-[52ch] text-[16.5px] leading-relaxed text-ink-muted">
-        Area grooming, hotel, dan daycare untuk kucing dan anjing dipisah total — ruangan berbeda,
-        jalur masuk berbeda, bahkan jadwal main di luar juga tidak bersamaan. Ini mengurangi stres
-        yang sering jadi penyebab hewan tidak nafsu makan saat dititipkan.
-      </p>
+<section id="zona" class="section bg-meadow text-ink" aria-labelledby="zones-heading">
+  <div class="wrap">
+    <div class="grid gap-5 lg:grid-cols-[1fr_0.8fr] lg:items-end lg:gap-16">
+      <h2 id="zones-heading" class="section-heading">Kucing dan Anjing, Dunia Terpisah.</h2>
+      <p class="intro">Ruang yang berbeda untuk kebutuhan yang berbeda. Pengaturan zona mencakup grooming, hotel, dan daycare, bukan sekadar pemisah di satu ruangan.</p>
     </div>
-
-    <div class="grid grid-cols-2 gap-4">
-      <div class="rounded-2xl border border-border bg-mint-tint p-6">
-        <div class="mb-3 text-teal-deep"><CatIcon size={32} weight="duotone" /></div>
-        <div class="font-bold text-ink">Zona Kucing</div>
-        <div class="mt-1 text-sm text-ink-muted">Tenang, ruangan tertutup, jauh dari suara anjing</div>
-      </div>
-      <div class="rounded-2xl border border-border bg-coral-tint p-6">
-        <div class="mb-3 text-coral"><DogIcon size={32} weight="duotone" /></div>
-        <div class="font-bold text-ink">Zona Anjing</div>
-        <div class="mt-1 text-sm text-ink-muted">Area bermain luas, jadwal keluar sendiri</div>
-      </div>
+    <div class="mt-10 grid items-start gap-9 md:grid-cols-[0.85fr_1.15fr] md:gap-12">
+      <figure>
+        <img
+          src="/images/pets/resting-cat-640.webp"
+          srcset="/images/pets/resting-cat-640.webp 640w, /images/pets/resting-cat-1280.webp 1280w"
+          sizes="(min-width: 768px) 40vw, 100vw"
+          width="1280"
+          height="960"
+          loading="lazy"
+          decoding="async"
+          alt="Kucing beristirahat tenang, sebagai ilustrasi kebutuhan zona kucing"
+          class="photo aspect-[4/5] max-h-[490px]"
+        />
+        <figcaption class="mt-5">
+          <h3 class="text-[27px] text-leaf">Untuk yang suka tenang.</h3>
+          <p class="mt-3 max-w-[48ch] leading-relaxed">Zona kucing terpisah dari anjing, dengan ruangan dan jalur masuk berbeda agar tidak langsung berhadapan dengan gonggongan atau hewan lain.</p>
+          <p class="photo-caption">Foto ilustrasi kucing, bukan foto zona atau fasilitas Griya Sahabat.</p>
+        </figcaption>
+      </figure>
+      <figure class="md:pt-12">
+        <img
+          src="/images/pets/play-dog-640.webp"
+          srcset="/images/pets/play-dog-640.webp 640w, /images/pets/play-dog-1280.webp 1280w"
+          sizes="(min-width: 768px) 54vw, 100vw"
+          width="1280"
+          height="960"
+          loading="lazy"
+          decoding="async"
+          alt="Anjing menikmati waktu bermain, sebagai ilustrasi kebutuhan zona anjing"
+          class="photo aspect-[4/3]"
+        />
+        <figcaption class="mt-5">
+          <h3 class="text-[27px] text-leaf">Untuk yang ingin bergerak.</h3>
+          <p class="mt-3 max-w-[58ch] leading-relaxed">Zona anjing memiliki jadwal bermain yang tidak bersamaan dengan kucing. Pemisahan ruang, jalur, dan jadwal membantu mengurangi pemicu stres selama kunjungan.</p>
+          <p class="photo-caption">Foto ilustrasi anjing, bukan dokumentasi area bermain Griya Sahabat.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="mt-9 flex flex-col items-start justify-between gap-4 border-t border-border pt-6 md:flex-row md:items-center md:gap-10">
+      <p class="max-w-[72ch] leading-relaxed">Ini pengaturan yang dijelaskan dalam PRD. Pastikan detail ruang, jalur masuk, dan jadwal yang sesuai untuk sahabatmu bersama tim sebelum kunjungan.</p>
+      <a class="text-link shrink-0" href="#booking">Bahas kebutuhan zonanya</a>
     </div>
   </div>
 </section>

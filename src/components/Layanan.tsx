@@ -1,51 +1,87 @@
-import { motion } from "framer-motion";
-import Reveal, { staggerParent, griyaFade } from "./Reveal";
-import { ShoppingBagIcon } from "@phosphor-icons/react/dist/csr/ShoppingBag";
-import { ScissorsIcon } from "@phosphor-icons/react/dist/csr/Scissors";
-import { BuildingsIcon } from "@phosphor-icons/react/dist/csr/Buildings";
-import { SunIcon } from "@phosphor-icons/react/dist/csr/Sun";
-
 const services = [
-  { icon: ShoppingBagIcon, tint: "bg-mint-tint", iconColor: "text-teal-deep", title: "Pet Shop", desc: "Makanan premium, snack, aksesoris, mainan — kurasi untuk berbagai jenis dan usia hewan." },
-  { icon: ScissorsIcon, tint: "bg-coral-tint", iconColor: "text-coral", title: "Grooming & Spa", desc: "Mandi, potong bulu, perawatan kuku, sampai spa relaksasi untuk hewan yang stres." },
-  { icon: BuildingsIcon, tint: "bg-teal-tint", iconColor: "text-teal-deep", title: "Pet Hotel", desc: "Penitipan menginap dengan kamar sesuai ukuran & kepribadian hewan, dilengkapi live CCTV." },
-  { icon: SunIcon, tint: "bg-mint-tint", iconColor: "text-teal-deep", title: "Pet Daycare", desc: "Penitipan harian untuk yang kerja seharian — drop pagi, jemput sore, hewan tetap aktif bermain." },
+  {
+    title: "Grooming & Spa",
+    description: "Mandi, potong bulu, perawatan kuku, sampai spa relaksasi sesuai kebutuhan sahabatmu.",
+    image: "grooming",
+    alt: "Ilustrasi anjing mendapatkan perawatan grooming",
+    href: "#grooming",
+    action: "Lihat paket grooming",
+  },
+  {
+    title: "Pet Hotel",
+    description: "Rencanakan menginap dengan pilihan kamar sesuai ukuran dan kebutuhan hewan.",
+    image: "resting-cat",
+    alt: "Ilustrasi kucing yang sedang beristirahat",
+    href: "#hotel",
+    action: "Bandingkan kamar & tarif",
+  },
+  {
+    title: "Pet Daycare",
+    description: "Drop pagi, jemput sore. Bermain, bersosialisasi, dan makan sesuai jadwal selama kamu beraktivitas.",
+    image: "play-dog",
+    alt: "Ilustrasi anjing sedang bermain",
+    href: "#daycare",
+    action: "Lihat rencana harian",
+  },
 ];
 
 export default function Layanan() {
   return (
-    <section id="layanan" className="mx-auto max-w-6xl px-6 py-14 md:py-20">
-      <Reveal>
-        <h2 className="mb-8 text-center text-3xl font-extrabold tracking-tight text-ink md:mb-12 md:text-4xl text-balance">
-          Semua Kebutuhan Sahabatmu, Satu Tempat.
-        </h2>
-      </Reveal>
+    <section id="layanan" className="section bg-cream text-ink" aria-labelledby="layanan-heading">
+      <div className="wrap">
+        <div className="mb-9 grid gap-5 md:grid-cols-2 md:items-end md:gap-12">
+          <h2 id="layanan-heading" className="section-heading">Semua kebutuhan sahabatmu, satu tempat.</h2>
+          <p className="intro">Dari kebutuhan sehari-hari sampai waktu menginap. Mulai dari yang sahabatmu perlukan, lalu kenali pilihan perawatannya.</p>
+        </div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerParent}
-        className="grid grid-cols-2 gap-4 lg:grid-cols-4"
-      >
-        {services.map((s) => (
-          <motion.div
-            key={s.title}
-            variants={griyaFade}
-            whileHover={{ y: -6 }}
-            className="rounded-2xl border border-border bg-cream-alt p-4 transition-shadow hover:shadow-lg md:p-6"
-          >
-            <motion.div
-              whileHover={{ scale: 1.15, rotate: -6 }}
-              className={`mb-4 grid h-12 w-12 place-items-center rounded-xl ${s.tint} ${s.iconColor}`}
-            >
-              <s.icon size={24} weight="duotone" />
-            </motion.div>
-            <h3 className="mb-2 text-lg font-bold text-ink">{s.title}</h3>
-            <p className="text-[14.5px] leading-relaxed text-ink-muted">{s.desc}</p>
-          </motion.div>
-        ))}
-      </motion.div>
+        <div className="grid gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
+          <article className="min-w-0">
+            <figure>
+              <img
+                src="/images/pets/food-640.webp"
+                srcSet="/images/pets/food-640.webp 640w, /images/pets/food-1280.webp 1280w"
+                sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, calc(100vw - 48px)"
+                width={1280}
+                height={960}
+                loading="lazy"
+                decoding="async"
+                alt="Ilustrasi makanan untuk kebutuhan sehari-hari hewan"
+                className="photo aspect-[4/3]"
+              />
+              <figcaption className="photo-caption">Foto ilustrasi kategori, bukan katalog atau stok toko.</figcaption>
+            </figure>
+            <div className="mt-5 flex flex-wrap items-baseline justify-between gap-3">
+              <h3 className="text-2xl md:text-3xl">Pet Shop</h3>
+              <a href="#toko" className="text-link">Jelajahi kebutuhan harian</a>
+            </div>
+            <p className="mt-3 max-w-[50ch] leading-relaxed text-muted">Makanan premium, snack, aksesoris, dan mainan — kurasi untuk berbagai jenis dan usia hewan. Tanyakan stok sebelum berkunjung.</p>
+          </article>
+
+          <div className="divide-y divide-border">
+            {services.map((service, index) => (
+              <article key={service.href} className={`grid min-w-0 grid-cols-[104px_minmax(0,1fr)] items-start gap-5 sm:grid-cols-[160px_minmax(0,1fr)] ${index === 0 ? "pb-6" : "py-6"}`}>
+                <img
+                  src={`/images/pets/${service.image}-640.webp`}
+                  srcSet={`/images/pets/${service.image}-640.webp 640w, /images/pets/${service.image}-1280.webp 1280w`}
+                  sizes="(min-width: 640px) 160px, 104px"
+                  width={1280}
+                  height={960}
+                  loading="lazy"
+                  decoding="async"
+                  alt={service.alt}
+                  className="photo aspect-square sm:aspect-[4/3]"
+                />
+                <div className="min-w-0">
+                  <h3 className="text-xl sm:text-2xl">{service.title}</h3>
+                  <p className="mb-3 mt-2 text-sm leading-relaxed text-muted sm:text-base">{service.description}</p>
+                  <a href={service.href} className="text-link text-sm sm:text-base">{service.action}</a>
+                </div>
+              </article>
+            ))}
+            <p className="pt-4 text-sm leading-relaxed text-muted">Foto perawatan, istirahat, dan bermain adalah ilustrasi; bukan dokumentasi fasilitas atau pelanggan Griya Sahabat.</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
