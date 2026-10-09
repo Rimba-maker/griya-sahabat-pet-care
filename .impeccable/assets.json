@@ -1,0 +1,161 @@
+{
+  "origin": "Verified Pexels stock, not facility/customer/catalog evidence",
+  "license": "https://www.pexels.com/license/",
+  "photos": [
+    {
+      "name": "happy-dog",
+      "photoId": 39060903,
+      "photographer": "FCA",
+      "source": "https://www.pexels.com/photo/happy-dog-playing-in-sunlit-flower-field-39060903/",
+      "variants": [
+        "public/images/pets/happy-dog-640.webp",
+        "public/images/pets/happy-dog-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "curious-kitten",
+      "photoId": 35283576,
+      "photographer": "Ahmet Kerem Derin",
+      "source": "https://www.pexels.com/photo/adorable-kitten-under-lush-green-foliage-35283576/",
+      "variants": [
+        "public/images/pets/curious-kitten-640.webp",
+        "public/images/pets/curious-kitten-1280.webp"
+      ],
+      "crop": "4:3, bottom"
+    },
+    {
+      "name": "rabbit",
+      "photoId": 34908108,
+      "photographer": "Rebekka Tröster",
+      "source": "https://www.pexels.com/photo/adorable-lop-eared-rabbit-in-lush-greenery-34908108/",
+      "variants": [
+        "public/images/pets/rabbit-640.webp",
+        "public/images/pets/rabbit-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "golden",
+      "photoId": 11951018,
+      "photographer": "Barnabas Davoti",
+      "source": "https://www.pexels.com/photo/a-golden-retriever-on-the-grass-11951018/",
+      "variants": [
+        "public/images/pets/golden-640.webp",
+        "public/images/pets/golden-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "grooming",
+      "photoId": 9986355,
+      "photographer": "Ron Lach",
+      "source": "https://www.pexels.com/photo/man-brushing-dogs-hair-9986355/",
+      "variants": [
+        "public/images/pets/grooming-640.webp",
+        "public/images/pets/grooming-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "food",
+      "photoId": 12928244,
+      "photographer": "Barking Royalty",
+      "source": "https://www.pexels.com/photo/a-bowl-of-dog-food-12928244/",
+      "variants": [
+        "public/images/pets/food-640.webp",
+        "public/images/pets/food-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "resting-cat",
+      "photoId": 34418104,
+      "photographer": "大 董",
+      "source": "https://www.pexels.com/photo/relaxed-domestic-cat-lying-indoors-34418104/",
+      "variants": [
+        "public/images/pets/resting-cat-640.webp",
+        "public/images/pets/resting-cat-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "care-supplies",
+      "photoId": 4432261,
+      "photographer": "Mathew Coulton",
+      "source": "https://www.pexels.com/photo/white-short-coated-dog-on-a-wooden-floor-with-towel-and-bath-essentials-4432261/",
+      "variants": [
+        "public/images/pets/care-supplies-640.webp",
+        "public/images/pets/care-supplies-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "play-dog",
+      "photoId": 4445461,
+      "photographer": "Mathew Coulton",
+      "source": "https://www.pexels.com/photo/a-dog-lying-on-the-floor-4445461/",
+      "variants": [
+        "public/images/pets/play-dog-640.webp",
+        "public/images/pets/play-dog-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "dog-bed",
+      "photoId": 4445456,
+      "photographer": "Mathew Coulton",
+      "source": "https://www.pexels.com/photo/a-dog-lying-on-its-bed-4445456/",
+      "variants": [
+        "public/images/pets/dog-bed-640.webp",
+        "public/images/pets/dog-bed-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "cat-parent",
+      "photoId": 6001407,
+      "photographer": "Sam Lion",
+      "source": "https://www.pexels.com/photo/smiling-young-ethnic-female-messaging-on-smartphone-and-petting-cat-on-bed-6001407/",
+      "variants": [
+        "public/images/pets/cat-parent-640.webp",
+        "public/images/pets/cat-parent-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "first-groom",
+      "photoId": 6131153,
+      "photographer": "Tima Miroshnichenko",
+      "source": "https://www.pexels.com/photo/brown-and-white-long-coated-small-dog-6131153/",
+      "variants": [
+        "public/images/pets/first-groom-640.webp",
+        "public/images/pets/first-groom-1280.webp"
+      ],
+      "crop": "4:3, center"
+    },
+    {
+      "name": "treats",
+      "photoId": 8434641,
+      "photographer": "MART PRODUCTION",
+      "source": "https://www.pexels.com/photo/dog-food-in-a-stainless-steel-bowl-8434641/",
+      "variants": [
+        "public/images/pets/treats-640.webp",
+        "public/images/pets/treats-1280.webp"
+      ],
+      "crop": "4:3, center"
+    }
+  ],
+  "fonts": [
+    {
+      "path": "public/fonts/dynapuff-latin.woff2",
+      "source": "https://cdn.jsdelivr.net/npm/@fontsource-variable/dynapuff/files/dynapuff-latin-wght-normal.woff2",
+      "license": "SIL Open Font License 1.1"
+    },
+    {
+      "path": "public/fonts/noto-sans-latin.woff2",
+      "source": "https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans/files/noto-sans-latin-wght-normal.woff2",
+      "license": "SIL Open Font License 1.1"
+    }
+  ]
+}
