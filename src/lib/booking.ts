@@ -6,7 +6,7 @@ export function bookingHref(service: Service, packageName = "", pet = "") {
   const query = new URLSearchParams({ layanan: service });
   if (packageName) query.set("paket", packageName);
   if (pet) query.set("hewan", pet);
-  return `/?${query}#booking`;
+  return `?${query}#booking`;
 }
 
 export function localToday(now = new Date()) {

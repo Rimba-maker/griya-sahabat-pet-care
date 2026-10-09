@@ -5,6 +5,7 @@ import { ScissorsIcon } from "@phosphor-icons/react/dist/csr/Scissors";
 import { HouseIcon } from "@phosphor-icons/react/dist/csr/House";
 import { SunIcon } from "@phosphor-icons/react/dist/csr/Sun";
 import { careNote, civilDate, localToday, services, type Service } from "../lib/booking";
+import { basePath } from "../lib/site";
 
 const paths = [
   { name: "Pet Shop", href: "#toko", icon: StorefrontIcon },
@@ -36,13 +37,13 @@ export default function Hero() {
         <p className="welcome-intro">Pet shop, grooming, hotel, dan daycare dalam satu tempat.<br className="hidden md:block" /> Untuk yang berbulu, bersayap, dan bersisik—dengan perhatian pada kebutuhan masing-masing.</p>
         <div className="welcome-desk">
           <figure className="pet-portrait">
-            <img src="/images/pets/happy-dog-640.webp" srcSet="/images/pets/happy-dog-640.webp 640w, /images/pets/happy-dog-1280.webp 1280w" sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anjing kecil tersenyum di antara bunga dan rumput" fetchPriority="high" />
+            <img src={`${basePath}images/pets/happy-dog-640.webp`} srcSet={`${basePath}images/pets/happy-dog-640.webp 640w, ${basePath}images/pets/happy-dog-1280.webp 1280w`} sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anjing kecil tersenyum di antara bunga dan rumput" fetchPriority="high" />
             <figcaption>Yang ceria, disambut hangat.</figcaption>
           </figure>
           <div className="visit-desk">
             <h2>Mau main, dirawat, atau menginap?</h2>
             <p>Rencana dulu, konfirmasi bersama tim.</p>
-            <form action="/#booking" method="get">
+            <form action="#booking" method="get">
               <div className="field">
                 <label htmlFor="quick-service">Layanan yang dibutuhkan</label>
                 <select id="quick-service" name="layanan" value={service} onChange={(event) => setService(event.target.value as Service)}>
@@ -67,7 +68,7 @@ export default function Hero() {
             </form>
           </div>
           <figure className="pet-portrait">
-            <img src="/images/pets/curious-kitten-640.webp" srcSet="/images/pets/curious-kitten-640.webp 640w, /images/pets/curious-kitten-1280.webp 1280w" sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anak kucing bermata besar di bawah dedaunan hijau" />
+            <img src={`${basePath}images/pets/curious-kitten-640.webp`} srcSet={`${basePath}images/pets/curious-kitten-640.webp 640w, ${basePath}images/pets/curious-kitten-1280.webp 1280w`} sizes="(max-width: 767px) 44vw, 320px" width="640" height="480" alt="Anak kucing bermata besar di bawah dedaunan hijau" />
             <figcaption>Yang pemalu, dikenali dulu.</figcaption>
           </figure>
         </div>

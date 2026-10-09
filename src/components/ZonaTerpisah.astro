@@ -1,3 +1,7 @@
+---
+import { basePath } from "../lib/site";
+---
+
 <section id="zona" class="section bg-meadow text-ink" aria-labelledby="zones-heading">
   <div class="wrap">
     <div class="grid gap-5 lg:grid-cols-[1fr_0.8fr] lg:items-end lg:gap-16">
@@ -7,8 +11,8 @@
     <div class="mt-10 grid items-start gap-9 md:grid-cols-[0.85fr_1.15fr] md:gap-12">
       <figure>
         <img
-          src="/images/pets/resting-cat-640.webp"
-          srcset="/images/pets/resting-cat-640.webp 640w, /images/pets/resting-cat-1280.webp 1280w"
+          src={`${basePath}images/pets/resting-cat-640.webp`}
+          srcset={`${basePath}images/pets/resting-cat-640.webp 640w, ${basePath}images/pets/resting-cat-1280.webp 1280w`}
           sizes="(min-width: 768px) 40vw, 100vw"
           width="1280"
           height="960"
@@ -25,8 +29,8 @@
       </figure>
       <figure class="md:pt-12">
         <img
-          src="/images/pets/play-dog-640.webp"
-          srcset="/images/pets/play-dog-640.webp 640w, /images/pets/play-dog-1280.webp 1280w"
+          src={`${basePath}images/pets/play-dog-640.webp`}
+          srcset={`${basePath}images/pets/play-dog-640.webp 640w, ${basePath}images/pets/play-dog-1280.webp 1280w`}
           sizes="(min-width: 768px) 54vw, 100vw"
           width="1280"
           height="960"

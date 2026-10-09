@@ -1,3 +1,5 @@
+import { basePath } from "../lib/site";
+
 const categories = [
   { label: "Makanan Premium", description: "Untuk kebutuhan makan sesuai jenis dan usia sahabatmu.", image: "food", alt: "Ilustrasi makanan hewan", className: "md:col-span-6", aspect: "md:aspect-[3/2]" },
   { label: "Snack & Treats", description: "Camilan untuk selingan dan momen belajar.", image: "treats", alt: "Ilustrasi camilan untuk hewan", className: "md:col-span-3", aspect: "md:aspect-[4/5]" },
@@ -6,7 +8,7 @@ const categories = [
 
 function categoryHref(category: string) {
   const query = new URLSearchParams({ catatan: `Saya ingin menanyakan stok ${category}. Mohon konfirmasi pilihan dan ketersediaannya sebelum saya berkunjung.` });
-  return `/?${query}#booking`;
+  return `?${query}#booking`;
 }
 
 export default function Toko() {
@@ -22,8 +24,8 @@ export default function Toko() {
           {categories.map((category) => (
             <article key={category.label} className={`min-w-0 ${category.className}`}>
               <img
-                src={`/images/pets/${category.image}-640.webp`}
-                srcSet={`/images/pets/${category.image}-640.webp 640w, /images/pets/${category.image}-1280.webp 1280w`}
+                src={`${basePath}images/pets/${category.image}-640.webp`}
+                srcSet={`${basePath}images/pets/${category.image}-640.webp 640w, ${basePath}images/pets/${category.image}-1280.webp 1280w`}
                 sizes={category.image === "food" ? "(min-width: 768px) 560px, (min-width: 640px) 600px, calc(100vw - 48px)" : "(min-width: 768px) 280px, (min-width: 640px) 600px, calc(100vw - 48px)"}
                 width={1280}
                 height={960}
@@ -42,8 +44,8 @@ export default function Toko() {
         <div className="mt-10 grid items-start gap-8 border-t border-border pt-9 md:grid-cols-12 lg:gap-10">
           <article className="min-w-0 md:col-span-5">
             <img
-              src="/images/pets/care-supplies-640.webp"
-              srcSet="/images/pets/care-supplies-640.webp 640w, /images/pets/care-supplies-1280.webp 1280w"
+              src={`${basePath}images/pets/care-supplies-640.webp`}
+              srcSet={`${basePath}images/pets/care-supplies-640.webp 640w, ${basePath}images/pets/care-supplies-1280.webp 1280w`}
               sizes="(min-width: 768px) 460px, (min-width: 640px) 600px, calc(100vw - 48px)"
               width={1280}
               height={960}
@@ -65,8 +67,8 @@ export default function Toko() {
 
           <article className="min-w-0 md:col-span-4">
             <img
-              src="/images/pets/dog-bed-640.webp"
-              srcSet="/images/pets/dog-bed-640.webp 640w, /images/pets/dog-bed-1280.webp 1280w"
+              src={`${basePath}images/pets/dog-bed-640.webp`}
+              srcSet={`${basePath}images/pets/dog-bed-640.webp 640w, ${basePath}images/pets/dog-bed-1280.webp 1280w`}
               sizes="(min-width: 768px) 370px, (min-width: 640px) 600px, calc(100vw - 48px)"
               width={1280}
               height={960}

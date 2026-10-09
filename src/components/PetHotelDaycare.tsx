@@ -1,4 +1,5 @@
 import { bookingHref } from "../lib/booking";
+import { basePath } from "../lib/site";
 
 const rooms = [
   { title: "Kamar Standard", description: "Kamar dasar, nyaman", cat: "Rp 85k", dog: "Rp 120k", dogSize: "Anjing kecil–sedang" },
@@ -24,8 +25,8 @@ export default function PetHotelDaycare() {
           <div className="grid items-start gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:gap-12">
             <figure className="min-w-0">
               <img
-                src="/images/pets/resting-cat-640.webp"
-                srcSet="/images/pets/resting-cat-640.webp 640w, /images/pets/resting-cat-1280.webp 1280w"
+                src={`${basePath}images/pets/resting-cat-640.webp`}
+                srcSet={`${basePath}images/pets/resting-cat-640.webp 640w, ${basePath}images/pets/resting-cat-1280.webp 1280w`}
                 sizes="(min-width: 1024px) 370px, (min-width: 640px) 600px, calc(100vw - 48px)"
                 width={1280}
                 height={960}
@@ -89,8 +90,8 @@ export default function PetHotelDaycare() {
           </div>
           <figure className="min-w-0">
             <img
-              src="/images/pets/play-dog-640.webp"
-              srcSet="/images/pets/play-dog-640.webp 640w, /images/pets/play-dog-1280.webp 1280w"
+              src={`${basePath}images/pets/play-dog-640.webp`}
+              srcSet={`${basePath}images/pets/play-dog-640.webp 640w, ${basePath}images/pets/play-dog-1280.webp 1280w`}
               sizes="(min-width: 1024px) 470px, (min-width: 640px) 600px, calc(100vw - 48px)"
               width={1280}
               height={960}

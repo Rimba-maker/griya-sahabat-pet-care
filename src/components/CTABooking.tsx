@@ -3,6 +3,7 @@ import { ArrowRightIcon } from "@phosphor-icons/react/dist/csr/ArrowRight";
 import { CopyIcon } from "@phosphor-icons/react/dist/csr/Copy";
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/csr/WhatsappLogo";
 import { careNote, civilDate, localToday, requestErrors, requestMessage, services, whatsappUrl, type Service, type VisitRequest, type RequestErrors } from "../lib/booking";
+import { basePath } from "../lib/site";
 
 const empty: VisitRequest = { nama: "", whatsapp: "", hewan: "", layanan: "Grooming", paket: "", tanggal: "", checkout: "", catatan: "" };
 const contact = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? "";
@@ -83,7 +84,7 @@ export default function CTABooking() {
         <h2 className="section-heading">Titipkan Sahabatmu Dengan Tenang.</h2>
         <p className="mt-5 max-w-[42ch] text-[16px]">Kenalkan sahabatmu, ceritakan kebutuhannya, lalu siapkan rencana kunjungan. Hal-hal kecilnya penting buat kami.</p>
         <figure className="mt-8 max-w-[340px]">
-          <img className="photo" src="/images/pets/rabbit-640.webp" srcSet="/images/pets/rabbit-640.webp 640w, /images/pets/rabbit-1280.webp 1280w" sizes="(max-width:767px) 88vw,340px" width="640" height="480" loading="lazy" decoding="async" alt="Kelinci lop beristirahat di rumput hijau" />
+          <img className="photo" src={`${basePath}images/pets/rabbit-640.webp`} srcSet={`${basePath}images/pets/rabbit-640.webp 640w, ${basePath}images/pets/rabbit-1280.webp 1280w`} sizes="(max-width:767px) 88vw,340px" width="640" height="480" loading="lazy" decoding="async" alt="Kelinci lop beristirahat di rumput hijau" />
           <figcaption className="photo-caption !text-ink">Sahabat selain kucing dan anjing? Kesesuaian layanan dikonfirmasi lebih dulu. Foto ilustrasi Pexels.</figcaption>
         </figure>
         <p className="mt-7 max-w-[42ch] text-[13px] leading-relaxed">Permintaan ini bukan konfirmasi reservasi. Slot, kebutuhan khusus, dan tarif final perlu dibicarakan dengan tim.</p>

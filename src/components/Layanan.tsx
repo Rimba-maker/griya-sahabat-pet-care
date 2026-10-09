@@ -1,3 +1,5 @@
+import { basePath } from "../lib/site";
+
 const services = [
   {
     title: "Grooming & Spa",
@@ -38,8 +40,8 @@ export default function Layanan() {
           <article className="min-w-0">
             <figure>
               <img
-                src="/images/pets/food-640.webp"
-                srcSet="/images/pets/food-640.webp 640w, /images/pets/food-1280.webp 1280w"
+                src={`${basePath}images/pets/food-640.webp`}
+                srcSet={`${basePath}images/pets/food-640.webp 640w, ${basePath}images/pets/food-1280.webp 1280w`}
                 sizes="(min-width: 1024px) 480px, (min-width: 640px) 600px, calc(100vw - 48px)"
                 width={1280}
                 height={960}
@@ -61,8 +63,8 @@ export default function Layanan() {
             {services.map((service, index) => (
               <article key={service.href} className={`grid min-w-0 grid-cols-[104px_minmax(0,1fr)] items-start gap-5 sm:grid-cols-[160px_minmax(0,1fr)] ${index === 0 ? "pb-6" : "py-6"}`}>
                 <img
-                  src={`/images/pets/${service.image}-640.webp`}
-                  srcSet={`/images/pets/${service.image}-640.webp 640w, /images/pets/${service.image}-1280.webp 1280w`}
+                  src={`${basePath}images/pets/${service.image}-640.webp`}
+                  srcSet={`${basePath}images/pets/${service.image}-640.webp 640w, ${basePath}images/pets/${service.image}-1280.webp 1280w`}
                   sizes="(min-width: 640px) 160px, 104px"
                   width={1280}
                   height={960}

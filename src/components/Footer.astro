@@ -1,6 +1,7 @@
 ---
 import { PawPrintIcon } from "@phosphor-icons/react/dist/ssr/PawPrint";
 import assets from "../../.impeccable/assets.json";
+import { basePath } from "../lib/site";
 const year = new Date().getFullYear();
 ---
 <footer>
@@ -35,8 +36,8 @@ const year = new Date().getFullYear();
           <p>Foto stok merupakan ilustrasi, bukan dokumentasi fasilitas, pelanggan, atau katalog produk aktual.</p>
           {assets.photos.map((photo) => <a href={photo.source} target="_blank" rel="noopener noreferrer" class="underline">{photo.name} — {photo.photographer} / Pexels</a>)}
           <a class="underline" href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">Lisensi Pexels</a>
-          <a class="underline" href="/fonts/dynapuff-OFL.txt" target="_blank" rel="noopener noreferrer">DynaPuff — SIL Open Font License</a>
-          <a class="underline" href="/fonts/notosans-OFL.txt" target="_blank" rel="noopener noreferrer">Noto Sans — SIL Open Font License</a>
+          <a class="underline" href={`${basePath}fonts/dynapuff-OFL.txt`} target="_blank" rel="noopener noreferrer">DynaPuff — SIL Open Font License</a>
+          <a class="underline" href={`${basePath}fonts/notosans-OFL.txt`} target="_blank" rel="noopener noreferrer">Noto Sans — SIL Open Font License</a>
         </div>
       </details>
     </div>

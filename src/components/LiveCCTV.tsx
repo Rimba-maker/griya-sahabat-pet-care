@@ -1,3 +1,5 @@
+import { basePath } from "../lib/site";
+
 const accessSteps = [
   {
     title: "Tanyakan sebelum berkunjung.",
@@ -33,8 +35,8 @@ export default function LiveCCTV() {
         <div className="lg:pt-3">
           <figure>
             <img
-              src="/images/pets/cat-parent-640.webp"
-              srcSet="/images/pets/cat-parent-640.webp 640w, /images/pets/cat-parent-1280.webp 1280w"
+              src={`${basePath}images/pets/cat-parent-640.webp`}
+              srcSet={`${basePath}images/pets/cat-parent-640.webp 640w, ${basePath}images/pets/cat-parent-1280.webp 1280w`}
               sizes="(min-width: 1024px) 43vw, 100vw"
               width={1280}
               height={960}

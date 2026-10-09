@@ -1,4 +1,5 @@
 import { bookingHref } from "../lib/booking";
+import { basePath } from "../lib/site";
 
 const tiers = [
   { title: "Basic Bath", price: "Rp 75k–150k", note: "Tergantung ukuran", description: "Mandi, keringkan, sisir, dan potong kuku dasar.", featured: false },
@@ -16,8 +17,8 @@ export default function Grooming() {
           <p className="intro mb-7 mt-5">Ada yang butuh mandi, ada yang baru belajar nyaman dirawat. Pilih perawatan yang pas, ceritakan kebiasaannya kepada tim.</p>
           <figure>
             <img
-              src="/images/pets/grooming-640.webp"
-              srcSet="/images/pets/grooming-640.webp 640w, /images/pets/grooming-1280.webp 1280w"
+              src={`${basePath}images/pets/grooming-640.webp`}
+              srcSet={`${basePath}images/pets/grooming-640.webp 640w, ${basePath}images/pets/grooming-1280.webp 1280w`}
               sizes="(min-width: 1024px) 470px, (min-width: 640px) 600px, calc(100vw - 48px)"
               width={1280}
               height={960}

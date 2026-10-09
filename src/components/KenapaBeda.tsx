@@ -1,3 +1,5 @@
+import { basePath } from "../lib/site";
+
 const mechanisms = [
   {
     title: "Kenali dulu lewat Paspor Sahabat.",
@@ -25,8 +27,8 @@ export default function KenapaBeda() {
       <div className="wrap grid items-start gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <figure className="lg:pt-2">
           <img
-            src="/images/pets/first-groom-640.webp"
-            srcSet="/images/pets/first-groom-640.webp 640w, /images/pets/first-groom-1280.webp 1280w"
+            src={`${basePath}images/pets/first-groom-640.webp`}
+            srcSet={`${basePath}images/pets/first-groom-640.webp 640w, ${basePath}images/pets/first-groom-1280.webp 1280w`}
             sizes="(min-width: 1024px) 46vw, 100vw"
             width={1280}
             height={960}

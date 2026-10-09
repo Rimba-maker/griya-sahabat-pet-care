@@ -1,3 +1,5 @@
+import { basePath } from "../lib/site";
+
 const profiles = [
   {
     id: "milo",
@@ -59,8 +61,8 @@ export default function PasporSahabat() {
               <div className="grid items-center gap-5 sm:grid-cols-[140px_1fr]">
                 <figure>
                   <img
-                    src={`/images/pets/${profile.photo}-640.webp`}
-                    srcSet={`/images/pets/${profile.photo}-640.webp 640w, /images/pets/${profile.photo}-1280.webp 1280w`}
+                    src={`${basePath}images/pets/${profile.photo}-640.webp`}
+                    srcSet={`${basePath}images/pets/${profile.photo}-640.webp 640w, ${basePath}images/pets/${profile.photo}-1280.webp 1280w`}
                     sizes="(min-width: 640px) 140px, 60vw"
                     width={1280}
                     height={960}
