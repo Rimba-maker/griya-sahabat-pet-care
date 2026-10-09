@@ -8,7 +8,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build",
+    "build:pages": "astro check && astro build --site https://rimba-maker.github.io --base /griya-sahabat-pet-care/ --outDir ./dist-pages",
     "preview": "astro preview",
+    "preview:pages": "astro preview --site https://rimba-maker.github.io --base /griya-sahabat-pet-care/ --outDir ./dist-pages",
     "check": "astro check",
     "test": "node --experimental-strip-types --test src/lib/booking.spec.ts",
     "astro": "astro"
