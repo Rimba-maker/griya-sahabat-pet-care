@@ -26,6 +26,10 @@ pnpm-debug.log*
 # local documentation — keep AI session context outside this folder
 docs/
 
+# local AI session context — keep readable at the project root
+/PRODUCT.md
+/DESIGN.md
+
 # local design iterations and verification artifacts
 .impeccable/mocks/
 .impeccable/questions/
