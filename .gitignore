@@ -23,6 +23,10 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# internal docs — not for public repo
-181-182-griya-sahabat-pet-care-PRD.md
+# local documentation — keep AI session context outside this folder
 docs/
+
+# local design iterations and verification artifacts
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/review/
