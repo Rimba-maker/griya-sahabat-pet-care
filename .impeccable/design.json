@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-09T11:33:39.796850Z",
+  "title": "Design System: Pondok Sahabat",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream Hangat",
+        "canonical": "#fff7e6",
+        "tonalRamp": [
+          "oklch(15.00% 0.02393 85.79)",
+          "oklch(26.43% 0.02393 85.79)",
+          "oklch(37.86% 0.02393 85.79)",
+          "oklch(49.29% 0.02393 85.79)",
+          "oklch(60.71% 0.02393 85.79)",
+          "oklch(72.14% 0.02393 85.79)",
+          "oklch(83.57% 0.02393 85.79)",
+          "oklch(95.00% 0.02393 85.79)"
+        ]
+      },
+      "meadow": {
+        "role": "primary",
+        "displayName": "Hijau Padang Ceria",
+        "canonical": "#b9d776",
+        "tonalRamp": [
+          "oklch(15.00% 0.12807 123.26)",
+          "oklch(26.43% 0.12807 123.26)",
+          "oklch(37.86% 0.12807 123.26)",
+          "oklch(49.29% 0.12807 123.26)",
+          "oklch(60.71% 0.12807 123.26)",
+          "oklch(72.14% 0.12807 123.26)",
+          "oklch(83.57% 0.12807 123.26)",
+          "oklch(95.00% 0.12807 123.26)"
+        ]
+      },
+      "leaf": {
+        "role": "primary",
+        "displayName": "Hijau Daun Dalam",
+        "canonical": "#23573d",
+        "tonalRamp": [
+          "oklch(15.00% 0.07133 159.11)",
+          "oklch(26.43% 0.07133 159.11)",
+          "oklch(37.86% 0.07133 159.11)",
+          "oklch(49.29% 0.07133 159.11)",
+          "oklch(60.71% 0.07133 159.11)",
+          "oklch(72.14% 0.07133 159.11)",
+          "oklch(83.57% 0.07133 159.11)",
+          "oklch(95.00% 0.07133 159.11)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Hijau Tinta",
+        "canonical": "#123222",
+        "tonalRamp": [
+          "oklch(15.00% 0.04833 159.34)",
+          "oklch(26.43% 0.04833 159.34)",
+          "oklch(37.86% 0.04833 159.34)",
+          "oklch(49.29% 0.04833 159.34)",
+          "oklch(60.71% 0.04833 159.34)",
+          "oklch(72.14% 0.04833 159.34)",
+          "oklch(83.57% 0.04833 159.34)",
+          "oklch(95.00% 0.04833 159.34)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Hijau Sekunder",
+        "canonical": "#41543f",
+        "tonalRamp": [
+          "oklch(15.00% 0.04152 142.35)",
+          "oklch(26.43% 0.04152 142.35)",
+          "oklch(37.86% 0.04152 142.35)",
+          "oklch(49.29% 0.04152 142.35)",
+          "oklch(60.71% 0.04152 142.35)",
+          "oklch(72.14% 0.04152 142.35)",
+          "oklch(83.57% 0.04152 142.35)",
+          "oklch(95.00% 0.04152 142.35)"
+        ]
+      },
+      "coral": {
+        "role": "secondary",
+        "displayName": "Coral Sambutan",
+        "canonical": "#eb7654",
+        "tonalRamp": [
+          "oklch(15.00% 0.15291 37.03)",
+          "oklch(26.43% 0.15291 37.03)",
+          "oklch(37.86% 0.15291 37.03)",
+          "oklch(49.29% 0.15291 37.03)",
+          "oklch(60.71% 0.15291 37.03)",
+          "oklch(72.14% 0.15291 37.03)",
+          "oklch(83.57% 0.15291 37.03)",
+          "oklch(95.00% 0.15291 37.03)"
+        ]
+      },
+      "sky": {
+        "role": "tertiary",
+        "displayName": "Embun Sejuk",
+        "canonical": "#d0e9e4",
+        "tonalRamp": [
+          "oklch(15.00% 0.02721 182.35)",
+          "oklch(26.43% 0.02721 182.35)",
+          "oklch(37.86% 0.02721 182.35)",
+          "oklch(49.29% 0.02721 182.35)",
+          "oklch(60.71% 0.02721 182.35)",
+          "oklch(72.14% 0.02721 182.35)",
+          "oklch(83.57% 0.02721 182.35)",
+          "oklch(95.00% 0.02721 182.35)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Batas Daun",
+        "canonical": "#8a9e76",
+        "tonalRamp": [
+          "oklch(15.00% 0.06129 129.54)",
+          "oklch(26.43% 0.06129 129.54)",
+          "oklch(37.86% 0.06129 129.54)",
+          "oklch(49.29% 0.06129 129.54)",
+          "oklch(60.71% 0.06129 129.54)",
+          "oklch(72.14% 0.06129 129.54)",
+          "oklch(83.57% 0.06129 129.54)",
+          "oklch(95.00% 0.06129 129.54)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Merah Koreksi",
+        "canonical": "#9d302a",
+        "tonalRamp": [
+          "oklch(15.00% 0.14556 27.30)",
+          "oklch(26.43% 0.14556 27.30)",
+          "oklch(37.86% 0.14556 27.30)",
+          "oklch(49.29% 0.14556 27.30)",
+          "oklch(60.71% 0.14556 27.30)",
+          "oklch(72.14% 0.14556 27.30)",
+          "oklch(83.57% 0.14556 27.30)",
+          "oklch(95.00% 0.14556 27.30)"
+        ]
+      },
+      "field-surface": {
+        "role": "neutral",
+        "displayName": "Cream Field",
+        "canonical": "#fffdf7",
+        "tonalRamp": [
+          "oklch(15.00% 0.00818 91.48)",
+          "oklch(26.43% 0.00818 91.48)",
+          "oklch(37.86% 0.00818 91.48)",
+          "oklch(49.29% 0.00818 91.48)",
+          "oklch(60.71% 0.00818 91.48)",
+          "oklch(72.14% 0.00818 91.48)",
+          "oklch(83.57% 0.00818 91.48)",
+          "oklch(95.00% 0.00818 91.48)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display Sambutan",
+        "purpose": "Headline sambutan; mobile hingga 767px memakai clamp(2.25rem, 8.8vw, 3rem)."
+      },
+      "headline": {
+        "displayName": "Judul Bagian",
+        "purpose": "Heading balanced dengan lebar maksimum 24ch."
+      },
+      "title": {
+        "displayName": "Judul Komponen",
+        "purpose": "Langkah umum 24px; ukuran lokal 20–30px mengikuti kepadatan isi, bukan rasio wajib."
+      },
+      "body": {
+        "displayName": "Isi Utama",
+        "purpose": "Penjelasan layanan, tarif, dan isi praktis."
+      },
+      "intro": {
+        "displayName": "Pengantar",
+        "purpose": "Pengantar section dengan measure maksimum 68ch."
+      },
+      "label": {
+        "displayName": "Label Field",
+        "purpose": "Label Noto Sans yang terhubung ke kontrol native."
+      },
+      "action": {
+        "displayName": "Tindakan",
+        "purpose": "Tombol dan tautan dengan bobot tegas."
+      },
+      "caption": {
+        "displayName": "Konteks Ringkas",
+        "purpose": "Caption ilustrasi dan catatan perawatan dengan leading lapang."
+      }
+    },
+    "shadows": [
+      {
+        "name": "portrait-lift",
+        "value": "0 12px 28px #173e2d15",
+        "purpose": "Bayangan lembut pada bingkai potret; bukan default kartu."
+      },
+      {
+        "name": "care-settle-start",
+        "value": "0 6px 18px #23573d16",
+        "purpose": "Awal depth sesaat saat pilihan perawatan berubah."
+      },
+      {
+        "name": "care-settle-end",
+        "value": "0 0 0 #23573d00",
+        "purpose": "Akhir animasi tanpa elevation permanen."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-color-duration",
+        "value": "180ms",
+        "purpose": "Transisi background-color dan color pada tombol."
+      },
+      {
+        "name": "button-color-ease",
+        "value": "ease",
+        "purpose": "Easing transisi state tombol, tanpa transform tambahan."
+      },
+      {
+        "name": "care-settle-duration",
+        "value": "350ms",
+        "purpose": "Satu authored settle catatan saat pilihan berubah."
+      },
+      {
+        "name": "care-settle-ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Exponential ease-out catatan yang sudah terlihat."
+      },
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "Scroll anchor default; reduced motion menggantinya menjadi auto."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "prefers-reduced-motion: reduce mematikan animasi dan transisi."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm-min",
+        "value": "640px"
+      },
+      {
+        "name": "md-min",
+        "value": "768px"
+      },
+      {
+        "name": "lg-min",
+        "value": "1024px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "mobile-menu-max",
+        "value": "1099px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Leaf Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Aksi utama untuk menyiapkan atau melanjutkan rencana kunjungan; bukan konfirmasi reservasi.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Siapkan permintaan <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 12h16M13 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-button-primary{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .18s ease,color .18s ease;font-family:var(--font-sans,\"Noto Sans\",sans-serif);border:0;background:var(--color-leaf,#23573d);color:var(--color-cream,#fff7e6);} .ds-button-primary:hover{background:var(--color-ink,#123222);} .ds-button-primary:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} .ds-button-primary:disabled{cursor:wait;opacity:.65;} @media (prefers-reduced-motion:reduce){.ds-button-primary{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Outlined Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Aksi pendamping seperti menyalin permintaan; disabled mengikuti proses penyalinan.",
+      "html": "<button class=\"ds-button-secondary\" type=\"button\">Salin permintaan</button>",
+      "css": ".ds-button-secondary{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .18s ease,color .18s ease;font-family:var(--font-sans,\"Noto Sans\",sans-serif);border:1px solid var(--color-leaf,#23573d);background:transparent;color:var(--color-leaf,#23573d);} .ds-button-secondary:hover{background:var(--color-meadow,#b9d776);} .ds-button-secondary:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} .ds-button-secondary:disabled{cursor:wait;opacity:.65;} @media (prefers-reduced-motion:reduce){.ds-button-secondary{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Coral Visit Button",
+      "kind": "button",
+      "refersTo": "button-coral",
+      "description": "Varian hangat untuk ajakan kunjungan pada header.",
+      "html": "<a class=\"ds-button-coral\" href=\"#booking\">Yuk, rencanakan kunjungan</a>",
+      "css": ".ds-button-coral{display:inline-flex;min-height:48px;align-items:center;justify-content:center;gap:10px;padding:12px 20px;border-radius:12px;font-size:14px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;transition:background-color .18s ease,color .18s ease;font-family:var(--font-sans,\"Noto Sans\",sans-serif);border:0;background:var(--color-coral,#eb7654);color:var(--color-ink,#123222);} .ds-button-coral:hover{background:#f28764;color:var(--color-ink,#123222);} .ds-button-coral:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} @media (prefers-reduced-motion:reduce){.ds-button-coral{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Underlined Text Link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Tindakan ringan di alur bacaan; mempertebal underline saat hover.",
+      "html": "<a class=\"ds-text-link\" href=\"#booking\">Ceritakan kebutuhan sahabatmu</a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--color-leaf,#23573d);font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:.25em;font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-text-link:hover{text-decoration-thickness:2px;} .ds-text-link:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} @media (prefers-reduced-motion:reduce){.ds-text-link{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Native Visit Fields",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Input, select, date, textarea, dan contoh invalid memakai label terhubung serta browser native; border error disertai pesan.",
+      "html": "<div class=\"ds-fields\"><div class=\"ds-field\"><label for=\"ds-pet-name\">Nama kamu</label><input id=\"ds-pet-name\" name=\"nama\" type=\"text\" autocomplete=\"name\" placeholder=\"Nama pet parent\"></div><div class=\"ds-field\"><label for=\"ds-species\">Jenis sahabatmu</label><select id=\"ds-species\" name=\"hewan\"><option value=\"\">Pilih jenis hewan</option><option>Kucing</option><option>Anjing</option><option>Hewan lain</option></select></div><div class=\"ds-field\"><label for=\"ds-visit-date\">Tanggal kunjungan</label><input id=\"ds-visit-date\" name=\"tanggal\" type=\"date\"></div><div class=\"ds-field\"><label for=\"ds-visit-notes\">Catatan khusus (opsional)</label><textarea id=\"ds-visit-notes\" name=\"catatan\" rows=\"3\" placeholder=\"Alergi, jadwal makan, karakter, atau pertanyaan stok produk…\"></textarea></div><div class=\"ds-field\"><label for=\"ds-invalid-phone\">Nomor WhatsApp</label><input id=\"ds-invalid-phone\" name=\"whatsapp\" type=\"tel\" autocomplete=\"tel\" placeholder=\"08… atau +62…\" aria-invalid=\"true\" aria-describedby=\"ds-phone-error\"><p class=\"ds-form-error\" id=\"ds-phone-error\">Tulis nomor WhatsApp aktif, misalnya diawali 08 atau +62.</p></div></div>",
+      "css": ".ds-fields{display:grid;gap:18px;color:var(--color-ink,#123222);font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-field{display:flex;flex-direction:column;gap:7px;min-width:0;} .ds-field label{font-size:13px;font-weight:700;} .ds-field input,.ds-field select,.ds-field textarea{width:100%;min-height:46px;border:1px solid var(--color-border,#8a9e76);border-radius:10px;background:#fffdf7;padding:10px 12px;color:var(--color-ink,#123222);caret-color:var(--color-leaf,#23573d);font-size:14px;font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-field select{cursor:pointer;} .ds-field input::placeholder,.ds-field textarea::placeholder{color:var(--color-muted,#41543f);opacity:1;} .ds-field input[type=\"date\"]{font-variant-numeric:tabular-nums;} .ds-field [aria-invalid=\"true\"]{border-color:var(--color-error,#9d302a);} .ds-field input:focus-visible,.ds-field select:focus-visible,.ds-field textarea:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} .ds-form-error{margin:0;color:var(--color-error,#9d302a);font-size:13px;line-height:1.5;} @media (prefers-reduced-motion:reduce){.ds-field,.ds-fields,.ds-form-error{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Cream Canopy Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Navigasi cream dengan tautan desktop dan menu details native pada lebar sempit.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navigasi utama\"><a class=\"ds-brand\" href=\"#hero\"><span class=\"ds-brand-name\">Griya Sahabat</span><small class=\"ds-brand-caption\">PET CARE</small></a><div class=\"ds-nav-links\"><a href=\"#layanan\">Layanan</a><a href=\"#grooming\">Grooming</a><a href=\"#hotel\">Pet Hotel</a></div><details class=\"ds-mobile-menu\"><summary aria-label=\"Menu navigasi\"><svg width=\"25\" height=\"25\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 6h16M4 12h16M4 18h16\"/></svg></summary><div class=\"ds-mobile-links\"><a href=\"#layanan\">Layanan</a><a href=\"#paspor\">Paspor Sahabat</a><a href=\"#booking\">Rencanakan kunjungan</a></div></details></nav>",
+      "css": ".ds-nav{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:86px;gap:20px;padding:0 24px;background:var(--color-cream,#fff7e6);color:var(--color-ink,#123222);border-bottom:1px solid var(--color-border,#8a9e76);border-radius:0 0 28px 28px;font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-brand{display:block;color:inherit;text-decoration:none;} .ds-brand-name{display:block;font-family:var(--font-display,\"DynaPuff\",sans-serif);font-size:25px;font-weight:600;letter-spacing:-.025em;line-height:1.14;} .ds-brand-caption{display:block;margin-top:5px;font-size:10px;font-weight:700;letter-spacing:.15em;} .ds-nav-links{display:flex;gap:18px;font-size:13px;font-weight:600;} .ds-nav-links a{padding:12px 0;color:inherit;text-decoration:none;text-underline-offset:.25em;} .ds-nav-links a:hover{text-decoration:underline;} .ds-nav a:focus-visible,.ds-mobile-menu summary:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} .ds-mobile-menu{display:none;} .ds-mobile-menu summary{list-style:none;display:grid;min-width:44px;min-height:44px;place-items:center;border-radius:10px;cursor:pointer;} .ds-mobile-menu summary::-webkit-details-marker{display:none;} .ds-mobile-menu[open] summary{background:var(--color-meadow,#b9d776);} .ds-mobile-links{position:absolute;top:100%;inset-inline:24px;padding:16px 20px;border:1px solid var(--color-border,#8a9e76);border-radius:12px;background:var(--color-cream,#fff7e6);} .ds-mobile-links a{display:block;padding:12px 0;font-weight:600;color:var(--color-ink,#123222);text-decoration:none;} @media(max-width:1099px){.ds-nav-links{display:none;}.ds-mobile-menu{display:block;}} @media(max-width:767px){.ds-nav{min-height:74px;}.ds-brand-name{font-size:23px;}} @media (prefers-reduced-motion:reduce){.ds-brand,.ds-brand-caption,.ds-brand-name,.ds-mobile-links,.ds-mobile-menu,.ds-nav,.ds-nav-links{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Native Profile Choice",
+      "kind": "chip",
+      "refersTo": "choice",
+      "description": "Radio illustratif Paspor Sahabat; selected dan fokus berpindah melalui state native, tanpa tab palsu.",
+      "html": "<fieldset class=\"ds-choices\"><legend class=\"ds-choice-legend\">Pilih contoh profil ilustrasi</legend><div class=\"ds-choice-row\"><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-profile\" value=\"milo\" checked> Milo · Anjing</label><label class=\"ds-choice\"><input type=\"radio\" name=\"ds-profile\" value=\"nala\"> Nala · Kucing</label></div><p class=\"ds-choice-disclaimer\">Ini profil ilustrasi, bukan data hewan pelanggan.</p></fieldset>",
+      "css": ".ds-choices{min-width:0;padding:20px;border:0;border-radius:12px;background:var(--color-cream,#fff7e6);color:var(--color-ink,#123222);font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-choice-legend{font-weight:600;color:var(--color-leaf,#23573d);} .ds-choice-row{display:flex;flex-wrap:wrap;gap:12px;} .ds-choice{display:inline-flex;min-height:44px;align-items:center;gap:8px;border:1px solid var(--color-border,#8a9e76);border-radius:8px;padding:12px 16px;font-weight:600;cursor:pointer;} .ds-choice:hover{cursor:pointer;} .ds-choice input{width:16px;height:16px;accent-color:var(--color-leaf,#23573d);} .ds-choice:has(input:checked){background:var(--color-leaf,#23573d);color:var(--color-cream,#fff7e6);border-color:var(--color-leaf,#23573d);} .ds-choice:has(input:focus-visible){outline:3px solid #173e2d;outline-offset:4px;} .ds-choice input:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} .ds-choice-disclaimer{margin:16px 0 0;font-size:14px;line-height:1.7;color:var(--color-muted,#41543f);} @media (prefers-reduced-motion:reduce){.ds-choice,.ds-choice-disclaimer,.ds-choice-legend,.ds-choice-row,.ds-choices{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Meadow Category Card",
+      "kind": "card",
+      "refersTo": "card-meadow",
+      "description": "Wadah tenang untuk kategori aksesoris; hover/fokus milik tautannya, bukan kartu.",
+      "html": "<article class=\"ds-card\"><h3 class=\"ds-card-title\">Aksesoris</h3><p class=\"ds-card-body\">Kalung dan harness. Sampaikan jenis hewan serta ukuran agar tim bisa membantu menjelaskan pilihan yang sesuai.</p><a class=\"ds-card-link\" href=\"/?catatan=Saya%20ingin%20menanyakan%20stok%20Aksesoris%20(kalung%2C%20harness).%20Mohon%20konfirmasi%20pilihan%20dan%20ketersediaannya%20sebelum%20saya%20berkunjung.#booking\">Tanyakan stok aksesoris</a></article>",
+      "css": ".ds-card{min-width:0;border-radius:12px;background:var(--color-meadow,#b9d776);color:var(--color-ink,#123222);padding:24px;font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-card-title{margin:0;font-family:var(--font-display,\"DynaPuff\",sans-serif);font-size:20px;font-weight:600;line-height:1.14;letter-spacing:-.025em;text-wrap:balance;} .ds-card-body{margin:12px 0 20px;font-size:14px;line-height:1.7;} .ds-card-link{display:inline-flex;align-items:center;min-height:44px;color:var(--color-leaf,#23573d);font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:.25em;} .ds-card-link:hover{text-decoration-thickness:2px;} .ds-card-link:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:5px;} @media(min-width:1024px){.ds-card-title{font-size:24px;}} @media (prefers-reduced-motion:reduce){.ds-card,.ds-card-body,.ds-card-link,.ds-card-title{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Native FAQ Row",
+      "kind": "custom",
+      "refersTo": "faq",
+      "description": "Details/summary tetap bisa dibaca tanpa runtime; chevron CSS merespons state open.",
+      "html": "<details class=\"ds-faq\" open><summary class=\"ds-faq-summary\">Apakah bisa lihat live CCTV dari HP?</summary><p class=\"ds-faq-answer\">Menurut alur dalam PRD, link akses privat diberikan saat check-in dan bisa dibuka dari HP tanpa instalasi aplikasi. Halaman ini tidak menyediakan feed kamera. Konfirmasikan ketersediaan, waktu akses, dan cara membuka link dengan tim sebelum kunjungan.</p></details>",
+      "css": ".ds-faq{padding:4px 0;border-bottom:1px solid var(--color-border,#8a9e76);color:var(--color-ink,#123222);font-family:var(--font-sans,\"Noto Sans\",sans-serif);} .ds-faq-summary{list-style:none;display:flex;min-height:64px;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;color:var(--color-leaf,#23573d);font-size:16px;font-weight:700;line-height:1.625;cursor:pointer;} .ds-faq-summary::-webkit-details-marker{display:none;} .ds-faq-summary::after{content:\"\";width:10px;height:10px;border-right:2px solid var(--color-leaf,#23573d);border-bottom:2px solid var(--color-leaf,#23573d);transform:rotate(45deg);flex:none;margin-right:4px;} .ds-faq[open] .ds-faq-summary::after{transform:rotate(225deg);} .ds-faq-summary:hover{color:var(--color-ink,#123222);} .ds-faq-summary:focus-visible{outline:3px solid var(--color-leaf,#23573d);outline-offset:4px;border-radius:8px;} .ds-faq-answer{max-width:68ch;margin:0;padding:0 20px 24px 0;color:var(--color-muted,#41543f);font-size:16px;line-height:1.7;} @media (prefers-reduced-motion:reduce){.ds-faq,.ds-faq-answer,.ds-faq-summary{animation:none!important;transition:none!important;}}"
+    },
+    {
+      "name": "Care Selection Note",
+      "kind": "custom",
+      "refersTo": "care-note",
+      "description": "Catatan kebutuhan hewan dengan settle lembut saat pilihan berganti; bukan badge dekoratif.",
+      "html": "<p class=\"ds-care-note\">Zona kucing terpisah dari anjing. Ceritakan kebiasaan kecilnya agar pendekatan bisa disesuaikan.</p>",
+      "css": ".ds-care-note{margin:0;padding:12px 14px;border-radius:10px;background:var(--color-sky,#d0e9e4);color:var(--color-ink,#123222);font-size:12px;line-height:1.6;animation:ds-care-settle .35s cubic-bezier(.16,1,.3,1);font-family:var(--font-sans,\"Noto Sans\",sans-serif);} @keyframes ds-care-settle{from{background-color:#fbd2b5;box-shadow:0 6px 18px #23573d16;}to{background-color:var(--color-sky,#d0e9e4);box-shadow:0 0 0 #23573d00;}} @media (prefers-reduced-motion:reduce){.ds-care-note{animation:none!important;transition:none!important;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pondok Sahabat",
+    "overview": "Pondok Sahabat terasa seperti sambutan di taman yang hangat: happy, welcoming, imut, dan dekat dengan karakter masing-masing hewan. Meadow yang lebih kuat, leaf yang dalam, cream yang hangat, dan coral membuat suasana ceria tetap jelas dibaca; pilihan ini mengikuti persetujuan pengguna, bukan mengembalikan preview yang terlalu soft.\n\nHuruf display yang membulat memberi kepribadian, sementara teks isi dan kontrol tetap tenang serta praktis. Foto hewan nyata membawa ekspresi; caption menjelaskan status ilustrasinya. Nuansa taman adalah bahasa visual, bukan klaim tentang kebun binatang, fasilitas outdoor, atau kondisi operasional bisnis.\n\nSistem ini merekam sumber yang selesai di `src/styles/global.css` dan komponen terkait. Frontmatter memiliki nilai primitif normatif; `.impeccable/design.json` melengkapinya dengan metadata, ramp turunan untuk panel, depth, motion, breakpoint, dan contoh komponen. Keduanya adalah dokumentasi, bukan token runtime kedua. Komposisi tiga bagian hero dan strategi 14 bagian tetap milik `.impeccable/surfaces/src-pages-index-astro.md`, bukan kewajiban universal setiap layar.",
+    "keyCharacteristics": [
+      "Hijau taman tegas dengan foreground hijau gelap yang terbaca.",
+      "DynaPuff ekspresif; Noto Sans praktis untuk isi dan kontrol.",
+      "Permukaan hangat, sudut lembut, dan kedalaman yang hemat.",
+      "Foto ekspresif dengan status ilustrasi yang terlihat.",
+      "Kontrol native, fokus jelas, dan gerak yang mengikuti kebutuhan pengguna."
+    ],
+    "rules": [
+      {
+        "name": "The Readable Garden Rule",
+        "body": "Gunakan ink atau muted di meadow, ink di coral, dan cream di leaf; warna ceria tidak menggantikan kontras teks, label, atau status.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "DynaPuff membawa judul dan nama brand; Noto Sans membawa isi, label, tarif, dan tindakan. Heading memakai tracking yang sama dan text wrapping yang seimbang.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Depth Rule",
+        "body": "Gunakan bidang warna dan garis untuk struktur; jangan menambahkan bayangan pada setiap kartu atau baris hanya demi terasa interaktif.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** gunakan ink atau muted pada meadow, ink pada coral, dan cream pada leaf, termasuk label serta informasi pendukung.",
+      "**Do** pertahankan DynaPuff untuk judul dan Noto Sans untuk isi serta kontrol; muat font lokal dengan fallback yang wajar.",
+      "**Do** gunakan foto relevan dengan alt yang deskriptif dan caption ilustrasi yang terlihat; pisahkan suasana visual dari bukti fasilitas.",
+      "**Do** gunakan kontrol native, label terhubung, fokus keyboard yang jelas, dan pesan masalah yang bisa dipahami tanpa mengandalkan warna.",
+      "**Do** sesuaikan grid dengan isi; pertahankan informasi, target tindakan, safe-area mobile, serta preferensi reduced motion.",
+      "**Do** jaga tarif, kutipan PRD, dan status konfirmasi sesuai sumber produk; kehangatan visual tidak boleh membuat ilustrasi terasa seperti bukti operasional."
+    ],
+    "donts": [
+      "**Don't** melembutkan palet kembali ke preview yang ditolak atau mengganti dunia Pondok Sahabat yang sudah disetujui.",
+      "**Don't** memakai teks terang di meadow/coral, teks muted di coral/leaf, atau status error yang hanya dibedakan lewat warna.",
+      "**Don't** membuat semua isi menjadi kartu identik, menambah bayangan universal, atau menciptakan material kaca dan tekstur yang tidak ada di sumber.",
+      "**Don't** mengubah radio, select, date, atau FAQ native menjadi tiruan nonsemantik hanya demi tampilan.",
+      "**Don't** mengangkat komposisi hero tiga bagian atau urutan 14 bagian menjadi template universal desain sistem.",
+      "**Don't** mencatat ramp panel, nama dokumentasi radius/spacing, atau contoh snippet sebagai token runtime baru maupun sumber otoritas kedua."
+    ]
+  }
+}
